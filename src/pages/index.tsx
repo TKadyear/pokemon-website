@@ -2,27 +2,27 @@ import React, { useState } from 'react';
 import type { GetStaticProps } from 'next';
 import Layout from '../components/Layout';
 import PokemonDetails from '../components/PokemonDetails';
-import { NamedAPIResource, PokemonListResponse, Pokemon } from '../types/pokemonApiTypes';
+import { PokemonOverviewInterface, PokemonListResponseInterface, Pokemon } from '../types/pokemonApiTypes';
 import Sidemenu from '@/components/Sidemenu';
 
 interface HomeProps {
-  pokemons: NamedAPIResource[];
+  pokemons: PokemonOverviewInterface[];
   nextPage: string | null;
 }
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
-  const data: PokemonListResponse = await res.json();
+  const data: PokemonListResponseInterface = await res.json();
   return { props: { pokemons: data.results, nextPage: data.next } };
 };
 
 const Home: React.FC<HomeProps> = ({ pokemons, nextPage }) => {
-  const [ pokemonList, setPokemonList ] = useState<NamedAPIResource[]>(pokemons)
+  const [ pokemonList, setPokemonList ] = useState<PokemonOverviewInterface[]>(pokemons)
   const [ nextPagePokemon, setNextPagePokemon ] = useState<string>(nextPage ?? "")
-  const [ selected, setSelected ] = useState<NamedAPIResource | null>(null);
+  const [ selected, setSelected ] = useState<PokemonOverviewInterface | null>(null);
   const [ clicks, setClicks ] = useState<{ [ key: string ]: number }>({});
   const [ pokemonSelected, setPokemonSelected ] = useState<Pokemon | null>(null);
 
-  const handleSelect = async (p: NamedAPIResource) => {
+  const handleSelect = async (p: PokemonOverviewInterface) => {
     setSelected(p);
     setClicks((prev) => ({ ...prev, [ p.name ]: prev[ p.name ] ?? 0 }));
     const res = await fetch(`/api/pokemon/${p.name}`);
@@ -33,7 +33,7 @@ const Home: React.FC<HomeProps> = ({ pokemons, nextPage }) => {
   const handleSearchMore = async () => {
     if (nextPagePokemon) {
       const res = await fetch(nextPagePokemon);
-      const pokemonListUpdated: PokemonListResponse = await res.json();
+      const pokemonListUpdated: PokemonListResponseInterface = await res.json();
       const { next, results } = pokemonListUpdated
       setPokemonList([ ...pokemonList, ...results ])
       setNextPagePokemon(next ?? "")

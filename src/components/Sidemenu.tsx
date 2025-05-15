@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { NamedAPIResource } from '../types/pokemonApiTypes';
+import { PokemonOverviewInterface } from '../types/pokemonApiTypes';
 import PokemonList from './PokemonList';
 interface SidemenuProps {
-  pokemons: NamedAPIResource[];
-  onSelect: (pokemon: NamedAPIResource) => void;
+  pokemons: PokemonOverviewInterface[];
+  onSelect: (pokemon: PokemonOverviewInterface) => void;
   onSearchMore: () => Promise<void>;
   selected?: string;
 }
@@ -13,7 +13,7 @@ const Sidemenu: React.FC<SidemenuProps> = ({ pokemons, onSelect, onSearchMore, s
   const handleClick = () => {
     setIsOpen(!isOpen)
   }
-  const handleSelect = (pokemon: NamedAPIResource) => {
+  const handleSelect = (pokemon: PokemonOverviewInterface) => {
     onSelect(pokemon)
     setIsOpen(!isOpen)
   }

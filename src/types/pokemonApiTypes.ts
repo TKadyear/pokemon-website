@@ -1,22 +1,19 @@
-export interface NamedAPIResource {
+export interface PokemonOverviewInterface {
   name: string;
   url: string;
 }
 
-export interface PokemonListResponse {
+export interface PokemonListResponseInterface {
   count: number;
   next: string | null;
   previous: string | null;
-  results: NamedAPIResource[];
+  results: PokemonOverviewInterface[];
 }
-
-export interface PokemonSprites {
-  front_default: string | null;
-  [key: string]: string | null;
-}
-
 export interface Pokemon {
   id: number;
   name: string;
-  sprites: PokemonSprites;
+  sprites: {
+    front_default: string | null;
+    [key: string]: string | null;
+  }
 }

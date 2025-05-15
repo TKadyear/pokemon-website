@@ -1,8 +1,8 @@
 import React from 'react';
-import { NamedAPIResource } from '../types/pokemonApiTypes';
+import { PokemonOverviewInterface } from '../types/pokemonApiTypes';
 interface PokemonListProps {
-  pokemons: NamedAPIResource[];
-  onSelect: (pokemon: NamedAPIResource) => void;
+  pokemons: PokemonOverviewInterface[];
+  onSelect: (pokemon: PokemonOverviewInterface) => void;
   onSearchMore: () => Promise<void>;
   selected?: string;
 }
