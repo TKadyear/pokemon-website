@@ -20,21 +20,15 @@ It uses the [PokeAPI](https://pokeapi.co/) as the data source to fetch details a
 - Linter: ESLint  
 - Bundler: Turbopack (via Next.js)
 
-## Clone this repository
+## Getting started
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/TKadyear/pokemon-website.git
-
-# Go into the project folder
-$ cd pokemon-website
-
 # Install dependencies
 $ npm install
 
 # Start the development server
 $ npm run dev
-````
+```
 
 To view the production server, run the following commands:
 
