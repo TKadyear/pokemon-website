@@ -46,7 +46,7 @@ const Home: React.FC<HomeProps> = ({ pokemons }) => {
         />
       ) : (
         <main className="p-4 flex-1">
-          <p className="text-xl">Selecciona un Pokémon</p>
+          <p className="text-xl">Select a Pokémon</p>
         </main>
       )}
     </Layout>

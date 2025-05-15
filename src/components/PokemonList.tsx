@@ -8,7 +8,7 @@ interface PokemonListProps {
 }
 
 const PokemonList: React.FC<PokemonListProps> = ({ pokemons, onSelect, selected }) => (
-  <aside className="w-full md:w-1/4 border-r overflow-auto h-screen">
+  <aside className="w-full md:w-1/4 border-r overflow-auto">
     <ul>
       {pokemons.map((p) => (
         <li
