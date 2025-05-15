@@ -1,6 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #80a9fd;
+  --foreground: #4c493e;
+}
+
+@theme {
+  --text-color: #4C493E;
+  --color-amber: #F2DBAE;
+  --color-yellow: #F9E65A;
+  --color-orange: #F28749;
+  --color-black: #4C493E;
+  --color-blue: #80a9fd;
+  --color-blue-900: #4B68B9;
+  --color-red:  #DC4443;
+}
+
+body{
+  background-color: var(--background);
+}
+.sidemenu{
+  @apply w-full md:w-1/4 max-h-dvh overflow-auto  [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-blue-900 [&::-webkit-scrollbar-thumb]:bg-blue-950;
+}
+.item_pokemon_name{
+  @apply  p-2 bg-amber border border-transparent capitalize cursor-pointer rounded-r-full hover:border-yellow   hover:bg-orange;
+  &.item_pokemon_name--selected{
+    @apply bg-orange border border-yellow;
+  }
 }
