@@ -10,7 +10,7 @@ interface PokemonDetailsProps {
 const PokemonDetails: React.FC<PokemonDetailsProps> = ({ pokemon, clicks, onImageClick }) => (
   <div className="container_pokemon_details">
     <img
-      src={pokemon.sprites.front_default ?? "/images/unknown-pokemon.svg"}
+      src={pokemon?.sprites?.front_default ?? "/images/unknown-pokemon.svg"}
       alt={pokemon.name}
       className="w-64 h-64 m-auto object-contain cursor-pointer"
       onClick={onImageClick}
