@@ -9,8 +9,7 @@
   --color-blue-900: #4B68B9;
   --color-red:  #DC4443;
 }
-
-body{
+.main_container{
   background: linear-gradient(to right, #6ea7ec,#4B68B9);
 }
 .sidemenu{
@@ -21,4 +20,16 @@ body{
   &.item_pokemon_name--selected{
     @apply bg-orange border border-yellow;
   }
+}
+.container_pokemon_details{
+  @apply border-4 border-blue rounded h-full;
+  box-shadow: 0 0 0 8px var(--color-yellow);
+  background: linear-gradient(
+  to bottom,
+  var(--color-blue-100),
+  var(--color-blue-100) 40%,
+  var(--color-white) 40%,
+  var(--color-white)
+  );
+  background-size: 100% 20px;
 }

@@ -5,7 +5,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
-  <main className="flex flex-col md:flex-row">
+  <main className="flex flex-col md:flex-row main_container">
     {children}
   </main>
 );

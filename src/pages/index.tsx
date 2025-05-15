@@ -45,9 +45,9 @@ const Home: React.FC<HomeProps> = ({ pokemons }) => {
           onImageClick={handleImageClick}
         />
       ) : (
-        <main className="p-4 flex-1">
+        <div className="p-4 flex-1">
           <p className="text-xl">Select a Pokémon</p>
-        </main>
+        </div>
       )}
     </Layout>
   );
