@@ -10,11 +10,8 @@ It uses the [PokeAPI](https://pokeapi.co/) as the data source to fetch details a
 - [Author](#author)
 
 ## Overview  
-![Overview]()
+![Overview Desktop](./docs/desktop.png)
 
-
-## Links  
-Demo: WIP
 
 ## Technologies  
 - Framework: Next.js 15  
@@ -51,6 +48,6 @@ $ npm start
 
 ## Author
 
-GitHub - [TKadyear](https://github.com/TKadyear)
-LinkedIn - [Tamara Kadyear Saber](https://www.linkedin.com/in/tamara-kadyear-saber/)
+- GitHub - [TKadyear](https://github.com/TKadyear)
+- LinkedIn - [Tamara Kadyear Saber](https://www.linkedin.com/in/tamara-kadyear-saber/)
 
