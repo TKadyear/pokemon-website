@@ -26,7 +26,7 @@ const Sidemenu: React.FC<SidemenuProps> = ({ pokemons, onSelect, onSearchMore, s
           </svg>
         </button>
       </nav>
-      <aside aria-hidden="true" className={`sidemenu ${isOpen ? "block" : "hidden"}`}>
+      <aside className={`sidemenu ${isOpen ? "block" : "hidden"}`}>
         <PokemonList pokemons={pokemons} onSelect={handleSelect} selected={selected} onSearchMore={onSearchMore} />
       </aside>
     </>
