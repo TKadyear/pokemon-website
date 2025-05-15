@@ -1,10 +1,4 @@
 @import "tailwindcss";
-
-:root {
-  --background: #80a9fd;
-  --foreground: #4c493e;
-}
-
 @theme {
   --text-color: #4C493E;
   --color-amber: #F2DBAE;
@@ -17,7 +11,7 @@
 }
 
 body{
-  background-color: var(--background);
+  background: linear-gradient(to right, #6ea7ec,#4B68B9);
 }
 .sidemenu{
   @apply w-full md:w-1/4 max-h-dvh overflow-auto  [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-blue-900 [&::-webkit-scrollbar-thumb]:bg-blue-950;
