@@ -23,7 +23,6 @@ function reducer(state: State, action: Action): State {
 
 
 export function usePokemonClickReducer(initialState: State = {}) {
-  const [ state, dispatch ] = useReducer(reducer, {});
   return useReducer(reducer, initialState);
 }
 
